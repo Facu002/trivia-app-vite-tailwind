@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-function ApiCall() {
-fetch('https://the-trivia-api.com/api/questions?limit=5')
-    .then(response => response.json())
-    .then(data => console.log(data));
-
+function ApiCall(props) {
+        fetch(`https://the-trivia-api.com/api/questions?limit=${props.num}&difficulty=${props.difficulty}`)
+        .then(response => response.json())
+        .catch(error => console.error(error));
+        
 }
-
 export default ApiCall

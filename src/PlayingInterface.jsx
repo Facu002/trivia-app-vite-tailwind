@@ -7,10 +7,7 @@ import ApiCall from './ApiCall'
 function PlayingInterface() {
     const context = useContext(GameContext)
 return (
-    <div>
-        PlayingInterface
-        <span>{context.difficulty}</span>
-        <span>{context.num}</span>
+    <div class="bg-cyan-900 w-screen h-screen overflowy-scroll">
         <ApiCall difficulty={context.difficulty} num={context.num}/>
     </div>
 )

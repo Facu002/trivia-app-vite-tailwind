@@ -21,12 +21,11 @@ function Landing() {
     let onAdd = (num, diff) => {
         context.addItem(diff, num)
         console.log(diff,num);
-
     }
 
     return (
-        <div class="flex flex-col items-center justify-center h-screen">
-            <h1 class="text-3xl font-bold mb-8">TRIVIA RUN</h1>
+        <div class="flex flex-col items-center justify-center h-screen bg-cyan-900">
+            <h1 class="text-3xl font-bold mb-8 text-gray-300">TRIVIA RUN</h1>
         <div class="flex flex-col items-center mb-8">
 
         <Link to="/game" onClick={onAdd(Questions,Difficulty)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-8">
@@ -34,7 +33,7 @@ function Landing() {
         </Link>
 
         <div class="mb-8">
-        <label class="mr-2">Select a difficulty:</label>
+        <label class="mr-2 text-gray-300 font-semibold">Select a difficulty:</label>
         <select class="border border-gray-400 rounded">
             <option onClick={handleDifficultyChange} value="easy">Easy</option>
             <option onClick={handleDifficultyChange} value="medium">Medium</option>
@@ -43,12 +42,12 @@ function Landing() {
         </div>
 
         <div class="flex items-center space-x-4">
-            <div class="flex items-center border-purple  border-4 border-solid" >
-                <label class="mr-2">Number of Questions:</label>
+            <div class="flex items-center border-purple p-3 rounded bg-slate-700 border-2 border-solid" >
+                <label class="mr-2 text-gray-300 font-semibold">Number of Questions:</label>
                 <input id="myRange" onChange={handleQuestionsChange} type="range" class="border border-gray-400 rounded" min="4" max="20" step="2" value={Questions}/>
-            </div>
             <div class="bg-slate-700 py-1 px-2 mx-1 min-w-2">
-                <span class="bg-slate-700 text-white  mx-auto my-0" >{Questions}</span>
+                <span class="bg-slate-700 text-white mx-auto my-0 font-bold text-xl" >{Questions}</span>
+            </div>
             </div>
         </div>
     </div>

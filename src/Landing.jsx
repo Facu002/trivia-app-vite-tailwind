@@ -20,6 +20,8 @@ function Landing() {
 
     let onAdd = (num, diff) => {
         context.addItem(diff, num)
+        context.resetPoints(0)
+        context.resetCountAnswer()
         console.log(diff,num);
     }
 

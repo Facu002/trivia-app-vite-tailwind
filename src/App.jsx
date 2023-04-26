@@ -5,6 +5,7 @@ import Landing from './Landing'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PlayingInterface from './PlayingInterface'
 import GameContextProvider from './context/Context'
+import GameResult from './GameResult';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing/>}/>
           <Route path="/game" element={<PlayingInterface/>}/>
+          <Route path="/results" element={<GameResult/>}/>
         </Routes>
       </BrowserRouter>
       

@@ -9,6 +9,7 @@ const  GameContextProvider = ({children}) => {
     const [num, setNum] = useState()
     const [points, setPoints] = useState(0)
     const [countanswered, setCountanswered] = useState(0)
+    const [status, setStatus] = useState(false)
 
 
     const addItem= (diff, num)=>{
@@ -30,18 +31,22 @@ const  GameContextProvider = ({children}) => {
     } 
     const resetCountAnswer= (num)=>{
         setCountanswered(0)
+        setStatus(false)
     }
 
-    const checkGame= ()=>{
-        if (countanswered = num) {
-            console.log('ganaste pa')
+    const checkGame= (count)=>{
+        if (points > (num/1.5)) {
+            // console.log('ganaste pa')
+            // alert('ganaste pa')
+            setStatus(true)
         }else{
-            console.log('perdiste pa')
+            // setStatus(false)
+            console.log('contesta')
         }
     }
 
     return(
-        <GameContext.Provider value={{difficulty, num, addItem, addPoint, points, resetPoints, countanswered, countAnswer, resetCountAnswer, checkGame}}>
+        <GameContext.Provider value={{difficulty, num, addItem, addPoint, points, resetPoints, countanswered, countAnswer, resetCountAnswer, checkGame, status}}>
             {children}
         </GameContext.Provider>
     )

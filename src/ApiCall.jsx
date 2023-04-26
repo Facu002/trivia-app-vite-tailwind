@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Questions from './Questions';
+import GameResult from './GameResult';
 import { useContext } from 'react';
 import {GameContext} from './context/Context';
+
+import {Link} from 'react-router-dom'
+
 function ApiCall(props) {
 const context = useContext(GameContext)
 
@@ -38,15 +42,22 @@ return (
         {/* max-h-500 overflow-y-auto max-w-1/2 */}
         <div class="question-container">
                 {data && data.map(items =>(
-                <div ket={items.id} class="question-card">
+                <div ket={items} class="question-card">
                         <p class="min-w-fit p-3 mx-1 text-center ">{items.question}</p>
                         <Questions correct={items.correct_answer} incorrect={items.incorrect_answers}/>
                 </div>
                 ))}
         </div>
         <button class="points">{context.points}</button>
-        {/* <h3>{context.countanswered}</h3> */}
-        {/* <button class="check-points" onClick={()=>{context.checkGame()}}>A VER</button> */}
+        <h3>{context.countanswered}</h3>
+        {
+        context.countanswered == context.num ?
+        <Link to="/results" class="check-points" onClick={()=>{context.checkGame(context.countanswered)}}>A VER</Link>
+        : console.log('contesta')
+        }
+        
+        {context.status && <GameResult/>}
+        
         </div>
         )
         }

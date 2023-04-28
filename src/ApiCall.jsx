@@ -31,7 +31,7 @@ useEffect(() => {
 
 
 return (
-        <div class=" bg-slate-600 ">
+        <div class="bg-cyan-800">
         {/* <div class="flex flex-col w-3/6 m-auto justify-center content-center items-center bg-slate-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"> */}
         {
         
@@ -49,10 +49,9 @@ return (
                 ))}
         </div>
         <button class="points">{context.points}</button>
-        <h3>{context.countanswered}</h3>
         {
         context.countanswered == context.num ?
-        <Link to="/results" class="check-points" onClick={()=>{context.checkGame(context.countanswered)}}>A VER</Link>
+        <Link to="/results" class="check-points" onClick={()=>{context.checkGame(context.countanswered)}}>SEE RESULTS</Link>
         : console.log('contesta')
         }
         

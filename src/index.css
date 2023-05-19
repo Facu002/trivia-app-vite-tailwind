@@ -28,7 +28,7 @@
 
 
     .check-points{
-        @apply fixed z-20 bottom-1 right-1 bg-slate-200 text-blue-900 font-bold text-lg px-6 py-4 rounded-full text-center m-0;
+        @apply fixed z-20 bottom-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-slate-200 text-blue-900 font-bold text-lg px-6 py-4 rounded-full text-center m-0;
     }
 
     .buttons-style{
@@ -40,4 +40,26 @@
         @apply bg-sky-200 w-1/3 text-center backdrop-blur-md ;
     }
 
+    .TimerIsUp-modal{
+        @apply fixed top-0 left-0 w-full h-screen z-10 bg-slate-900 bg-opacity-30 flex justify-center align-middle
+    }
+
+    .TimerIsUp-text-container{
+        @apply bg-white w-6/12 h-3/6 text-center flex justify-center align-middle flex-col m-auto 
+    }
+
+    .counting-time{
+        @apply bg-white absolute top-2/4 left-10 z-10 flex flex-col p-4 text-center rounded-lg text-lg
+    }
+
 };
+
+.TimerIsUp-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    background-color: #1526415e;
+    z-index: 5;
+}

@@ -10,11 +10,21 @@ const  GameContextProvider = ({children}) => {
     const [points, setPoints] = useState(0)
     const [countanswered, setCountanswered] = useState(0)
     const [status, setStatus] = useState(false)
-
+    const [RunOutTime, setRunOutTime] = useState(false)
+    const [duration, setDuration] = useState()
 
     const addItem= (diff, num)=>{
         setNum(num)
         setDifficulty(diff)
+        if (diff === "easy") {
+            setDuration(60)
+        }
+        if (diff === "medium") {
+            setDuration(45)
+        }
+        if (diff === "hard") {
+            setDuration(30)
+        }
     }
 
     const addPoint= (point)=>{
@@ -34,8 +44,12 @@ const  GameContextProvider = ({children}) => {
         setStatus(false)
     }
 
+    const OutOfTime=()=>{
+        setRunOutTime(true)
+    }
+
     const checkGame= (count)=>{
-        if (points > (num/1.5)) {
+        if (points > (num/1.5) && RunOutTime == false) {
             // console.log('ganaste pa')
             // alert('ganaste pa')
             setStatus(true)
@@ -46,7 +60,7 @@ const  GameContextProvider = ({children}) => {
     }
 
     return(
-        <GameContext.Provider value={{difficulty, num, addItem, addPoint, points, resetPoints, countanswered, countAnswer, resetCountAnswer, checkGame, status}}>
+        <GameContext.Provider value={{difficulty, num, addItem, addPoint, points, resetPoints, countanswered, countAnswer, resetCountAnswer, checkGame, status, RunOutTime, OutOfTime, duration}}>
             {children}
         </GameContext.Provider>
     )

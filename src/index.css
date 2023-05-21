@@ -4,6 +4,10 @@
 
 @layer components{
 
+    .App{
+        @apply h-auto bg-cyan-900
+    }
+
     .points{
         @apply fixed z-20 top-1 right-1 bg-slate-200 text-blue-900 font-bold text-lg px-6 py-4 rounded-full text-center m-0;
     }
@@ -37,24 +41,40 @@
 
 
     .results-container{
-        @apply bg-sky-200 w-1/3 text-center backdrop-blur-md ;
+        @apply bg-sky-200 w-1/3 text-center backdrop-blur-md sm:w-3/4 sm:max-w-xs;
     }
 
     .TimerIsUp-modal{
-        @apply fixed top-0 left-0 w-full h-screen z-10 bg-slate-900 bg-opacity-30 flex justify-center align-middle
+        @apply fixed top-0 left-0 w-full h-screen z-10 bg-slate-900 bg-opacity-80 flex justify-center align-middle
     }
 
     .TimerIsUp-text-container{
-        @apply bg-white w-6/12 h-3/6 text-center flex justify-center align-middle flex-col m-auto 
+        @apply  w-6/12 h-3/6 text-center flex justify-around align-middle flex-col m-auto bg-orange-200 p-20 sm:w-10/12 sm:h-auto 
     }
 
     .counting-time{
-        @apply bg-white absolute top-2/4 left-10 z-10 flex flex-col p-4 text-center rounded-lg text-lg
+        @apply bg-white absolute top-2/4 left-10 z-10 flex flex-col p-4 text-center rounded-lg text-lg  sm:top-5 sm:left-1/2 sm:transform sm:-translate-x-1/2 md:top-5 md:left-1/2 md:transform md:-translate-x-1/2 
+    }
+
+    .game-options-container{
+        @apply flex flex-col items-center mb-8 border border-white bg-white bg-opacity-90 
+        h-auto p-10 rounded-lg sm:w-11/12 
+    }
+    .select-difficulty-container{
+        @apply flex items-center space-x-4
+    }
+
+    .diff-range-wrapper{
+        @apply flex items-center  p-3 rounded border border-solid sm:flex-col sm:justify-center sm:items-center
+    }
+
+    .instruction-container{
+        @apply bg-white w-96 p-8 rounded-lg sm:w-11/12
     }
 
 };
 
-.TimerIsUp-modal{
+/* .TimerIsUp-modal{
     position: fixed;
     top: 0;
     left: 0;
@@ -62,4 +82,4 @@
     height: 100vw;
     background-color: #1526415e;
     z-index: 5;
-}
+} */

@@ -9,7 +9,7 @@ function PlayingInterface() {
 return (
     <div class="bg-cyan-600 w-screen h-screen overflowy-scroll">
         {/* <CountdownTimer duration={context.duration} /> */}
-        <ApiCall difficulty={context.difficulty} num={context.num}/>
+        <ApiCall difficulty={context.difficulty} num={context.num} duration={context.duration}/>
     </div>
 )
 }

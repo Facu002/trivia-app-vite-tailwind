@@ -33,7 +33,7 @@ useEffect(() => {
 return (
         <>
         {
-        data.length >= 3 && <CountdownTimer duration={context.duration} />
+        data.length >= 3 && <CountdownTimer duration={props.duration} />
         // && <CountdownTimer duration={context.duration} />
         }
         <div className="bg-cyan-800">

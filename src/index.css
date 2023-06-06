@@ -5,11 +5,15 @@
 @layer components{
 
     .App{
-        @apply h-auto bg-cyan-900
+        @apply h-auto bg-bg-blue
+    }
+
+    .quiz-logo{
+        @apply w-60 sm:w-40 
     }
 
     .points{
-        @apply fixed z-20 top-1 right-1 bg-slate-200 text-blue-900 font-bold text-lg px-6 py-4 rounded-full text-center m-0;
+        @apply fixed z-20 top-1 right-1 text-blue-900 font-bold text-lg px-6 py-4 text-center m-0 bg-page-yellow rounded-lg border-4 border-black;
     }
     .question-container{
         @apply max-w-3xl h-3/5 overflow-y-scroll;
@@ -51,25 +55,28 @@
     .TimerIsUp-text-container{
         @apply  w-6/12 h-3/6 text-center flex justify-around align-middle flex-col m-auto bg-orange-200 p-20 sm:w-10/12 sm:h-auto 
     }
+    .TimerIsUp-text-container div{
+        @apply md:h-fit md:p-12 md:m-12
+    }
 
     .counting-time{
         @apply bg-white absolute top-2/4 left-10 z-10 flex flex-col p-4 text-center rounded-lg text-lg  sm:top-5 sm:left-1/2 sm:transform sm:-translate-x-1/2 md:top-5 md:left-1/2 md:transform md:-translate-x-1/2 
     }
 
     .game-options-container{
-        @apply flex flex-col items-center mb-8 border border-white bg-white bg-opacity-90 
-        h-auto p-10 rounded-lg sm:w-11/12 
+        @apply flex flex-col items-center mb-6 bg-opacity-90 
+        h-auto p-6 rounded-lg sm:w-11/12 
     }
     .select-difficulty-container{
-        @apply flex items-center space-x-4
+        @apply flex items-center space-x-4 border border-black
     }
 
     .diff-range-wrapper{
-        @apply flex items-center  p-3 rounded border border-solid sm:flex-col sm:justify-center sm:items-center
+        @apply flex items-center  p-3 rounded  sm:flex-col sm:justify-center sm:items-center
     }
 
     .instruction-container{
-        @apply bg-white w-96 p-8 rounded-lg sm:w-11/12
+        @apply bg-page-yellow bg-opacity-50 font-bold w-96 p-6 rounded-lg sm:w-11/12
     }
 
 };

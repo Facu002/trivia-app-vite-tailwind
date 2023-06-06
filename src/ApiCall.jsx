@@ -48,7 +48,7 @@ return (
         <div className="question-container">
                 {data && data.map(items =>(
                 <div key={items.correct_answer} className="question-card">
-                        <p className="min-w-fit p-3 mx-1 text-center ">{items.question}</p>
+                        <p className="min-w-fit p-3 mx-1 text-center ">{items.question.replace(/&#39;/g, "'").replace(/&quot;/g, '"')}</p>
                         <Questions correct={items.correct_answer} incorrect={items.incorrect_answers}/>
                 </div>
                 ))}

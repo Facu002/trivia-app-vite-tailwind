@@ -23,8 +23,10 @@ export default {
           'bg-blue' : '#374d6d',
           'sky-blue' : '#00BED7',
           'bright-red' : '#FF4133',
-          'page-yellow' : '#FFDE00'
+          'page-yellow' : '#FFDE00',
+          'shadow' : 'rgba(0, 0, 0, 0.3)'
         },
+
         // textShadow:{
         //   DEFAULT:  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
         //   1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;

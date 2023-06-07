@@ -17,13 +17,13 @@ const  GameContextProvider = ({children}) => {
         setNum(num)
         setDifficulty(diff)
         if (diff === "easy") {
-            setDuration(60)
+            setDuration(50)
         }
         if (diff === "medium") {
             setDuration(45)
         }
         if (diff === "hard") {
-            setDuration(30)
+            setDuration(35)
         }
     }
 

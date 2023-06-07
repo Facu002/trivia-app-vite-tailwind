@@ -13,13 +13,15 @@
     }
 
     .points{
-        @apply fixed z-20 top-1 right-1 text-blue-900 font-bold text-lg px-6 py-4 text-center m-0 bg-page-yellow rounded-lg border-4 border-black;
+        @apply fixed z-20 top-2 right-2 text-blue-900 font-bold text-2xl px-4 py-2 text-center m-0 bg-page-yellow ;
     }
     .question-container{
-        @apply max-w-3xl h-3/5 overflow-y-scroll;
+        @apply max-w-3xl h-3/5 overflow-y-scroll  sm:h-4/6
+        ;
     }
     .question-card{
-        @apply bg-blue-200 text-gray-800 font-bold m-5 rounded-md  max-w-3xl;
+        @apply bg-blue-200 text-gray-800 font-bold m-5 rounded-md  max-w-3xl 
+        ;
     }
     .answer-card{
         @apply  bg-sky-700  rounded rounded-t-none;
@@ -36,7 +38,9 @@
 
 
     .check-points{
-        @apply fixed z-20 bottom-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-slate-200 text-blue-900 font-bold text-lg px-6 py-4 rounded-full text-center m-0;
+        @apply fixed z-20 bottom-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-page-yellow text-black font-bold text-lg px-4 py-2 text-center m-0 border-2 border-black rounded-lg 
+        sm:bottom-2 sm:-translate-y-2 sm:py-3 sm:px-5
+        ;
     }
 
     .buttons-style{
@@ -60,7 +64,9 @@
     }
 
     .counting-time{
-        @apply bg-white absolute top-2/4 left-10 z-10 flex flex-col p-4 text-center rounded-lg text-lg  sm:top-5 sm:left-1/2 sm:transform sm:-translate-x-1/2 md:top-5 md:left-1/2 md:transform md:-translate-x-1/2 
+        @apply bg-white absolute top-2/4 left-10 z-10 flex flex-col p-4 text-center text-lg 
+        sm:top-5 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:py-1
+        md:top-5 md:left-1/2 md:transform md:-translate-x-1/2 
     }
 
     .game-options-container{
@@ -68,7 +74,7 @@
         h-auto p-6 rounded-lg sm:w-11/12 
     }
     .select-difficulty-container{
-        @apply flex items-center space-x-4 border border-black
+        @apply flex items-center space-x-4 
     }
 
     .diff-range-wrapper{
@@ -79,6 +85,10 @@
         @apply bg-page-yellow bg-opacity-50 font-bold w-96 p-6 rounded-lg sm:w-11/12
     }
 
+
+    .shadow-border{
+        @apply outline rounded-lg outline-4 outline-shadow
+    }
 };
 
 /* .TimerIsUp-modal{

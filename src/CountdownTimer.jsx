@@ -36,8 +36,8 @@ const CountdownTimer = ({ duration }) => {
   return (
     <div>
       {/* <button onClick={startTimer}>Start</button> */}
-      <div className='counting-time'>Remaining Time: <br /> 
-        <span className='bg-blue-200 border border-blue-600 text-3xl m-5 sm:text-1'>{formatTime()}</span>
+      <div className='counting-time shadow-border'>Remaining Time: <br /> 
+        <span className='bg-blue-200 border border-blue-600 text-3xl m-3 sm:text-1'>{formatTime()}</span>
       </div>
       {isTimeUp && <OutOfTimeAlert />}
     </div>

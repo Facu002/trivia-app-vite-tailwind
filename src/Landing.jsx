@@ -38,7 +38,7 @@ function Landing() {
                 START
             </Link>
 
-            <div className="mb-8 text-center border-4 rounded-lg border-black bg-page-yellow">
+            <div className="mb-8 text-center  bg-page-yellow shadow-border">
             <label className="mx-4 my-2 text-gray-900 font-semibold ">Select a difficulty:</label>
             <select className="mx-4 my-2 px-2 py-1 rounded-lg border-2 border-black">
                 <option className="" onClick={handleDifficultyChange} value="easy">Easy</option>
@@ -47,7 +47,7 @@ function Landing() {
             </select>
             </div>
 
-            <div className="select-difficulty-container border-4 rounded-lg bg-sky-blue">
+            <div className="select-difficulty-container shadow-border bg-sky-blue">
                 <div className="diff-range-wrapper" >
                     <div className='text-center'>
                         <label className="mr-2 text-black font-semibold">Number of questions:</label>
@@ -61,7 +61,7 @@ function Landing() {
 
         </div>
 
-        <div className="instruction-container">
+        <div className="instruction-container ">
         The game involves correctly answering more than half of the selected questions within a given time based on the chosen difficulty. Higher difficulty means less time, while lower difficulty grants more time. The objective is to answer most of the questions correctly within the allocated time. Choose the difficulty, read, and quickly respond to the questions to achieve a high score. Have fun challenging yourself! &#x1F60A;
         </div>
     </div>
